@@ -1,20 +1,24 @@
+/**
+ * app.module.ts
+ */
+
+// Angular Imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
+// Tesla Battery Module
+import { TeslaBatteryModule } from './tesla-battery/tesla-battery.module';
+
+// App Component
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		TeslaBatteryModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
